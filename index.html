@@ -286,6 +286,33 @@
 			background: var(--cyan-dim);
 		}
 
+		/* Ícones de engines */
+		.engine-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.6rem;
+		}
+
+		.engine-item img {
+			width: 96px;
+			height: 96px;
+			object-fit: contain;
+			filter: grayscale(30%);
+			transition: filter var(--transition), transform var(--transition);
+		}
+
+		.engine-item:hover img {
+			filter: grayscale(0%);
+			transform: translateY(-3px);
+		}
+
+		.engine-item span {
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 0.75rem;
+			color: var(--muted);
+		}
+
 		/* Footer */
 		footer {
 			border-top: 1px solid var(--border);
@@ -315,6 +342,7 @@
 		<nav aria-label="Navegação principal">
 			<a href="#sobre">Sobre</a>
 			<a href="#experiencia">Experiência</a>
+			<a href="#engines">Engines</a>
 			<a href="#jogos">Jogos</a>
 			<a href="#contato">Contato</a>
 		</nav>
@@ -328,11 +356,9 @@
 				<h2 id="titulo-sobre">Sobre</h2>
 				<p>
 					Meu nome é Heitor, sou desenvolvedor Unity há mais de três anos, com experiência na criação de jogos
-					de diversos gêneros.
-					Sou formado pela Apple Developer Academy e já publiquei jogos na Steam, App Store e Google Play
-					Store.
-					Participei do desenvolvimento de projetos expostos na BGS 2023 e 2025, além de ter jogos citados em
-					artigos da IGN,
+					de diversos gêneros. Além disso, também possuo experiência com Godot e Game Maker Studio 2. 
+					Sou formado pela Apple Developer Academy e já publiquei jogos na Steam, App Store e Google Play Store.
+					Participei do desenvolvimento de projetos expostos na BGS 2023 e 2025, além de ter jogos citados em artigos da IGN,
 					consolidando minha experiência no ciclo completo de desenvolvimento de jogos.
 				</p>
 			</section>
@@ -374,6 +400,36 @@
 						protótipo à publicação.
 					</p>
 				</article>
+			</section>
+
+			<!-- Engines -->
+			<section id="engines" aria-labelledby="titulo-engines">
+				<div class="section-divider"></div>
+				<h2 id="titulo-engines">Engines</h2>
+				<div class="d-flex justify-content-center gap-5">
+
+					<!-- Unity -->
+					<div class="engine-item">
+						<img src="https://img.informer.com/icons_mac/png/128/705/705016.png"
+							alt="Logo Unity">
+						<span>Unity</span>
+					</div>
+
+					<!-- Game Maker Studio 2 -->
+					<div class="engine-item">
+						<img src="https://img.utdstc.com/icon/09b/8c5/09b8c56ebaf0e8528022d175284f4ff0ba793b664086c5c5e668879cf4a06245:200"
+							alt="Logo Game Maker Studio 2">
+						<span>Game Maker Studio 2</span>
+					</div>
+
+					<!-- Godot -->
+					<div class="engine-item">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg"
+							alt="Logo Godot">
+						<span>Godot</span>
+					</div>
+
+				</div>
 			</section>
 
 			<!-- Jogos -->
